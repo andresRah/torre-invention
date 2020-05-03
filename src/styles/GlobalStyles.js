@@ -15,15 +15,17 @@ export const GlobalStyle = createGlobalStyle`
   button { background: transparent; border: 0; outline: 0 }
 
   body {
-    background: #fefefe;
+    background: #dadada;
     height: 100vh;
     margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
-    width: 100%; 
+    width: 100%;
   }
 
   #app {
+    background-color: #010101;
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     overflow-x: hidden;
     min-height: 100vh;
