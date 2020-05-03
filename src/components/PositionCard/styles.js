@@ -410,7 +410,6 @@ export const SpanLike = styled.span`
   font-size: 14px;
   -webkit-box-direction: normal;
   white-space: nowrap;
-  cursor: default !important;
   box-sizing: inherit;
   background: none;
   border: 1px solid #c2c2c2;
@@ -421,6 +420,7 @@ export const SpanLike = styled.span`
   line-height: 100%;
   margin-right: 6px;
   padding: 8px 16px;
+  cursor: pointer;
 `
 
 export const SpanCountLike = styled.span`
@@ -434,6 +434,5 @@ export const SpanCountLike = styled.span`
   white-space: nowrap;
   color: hsla(0,0%,100%,.9);
   line-height: 100%;
-  cursor: default !important;
   box-sizing: inherit;
 `
