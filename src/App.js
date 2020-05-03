@@ -1,18 +1,24 @@
 import 'babel-polyfill'
-import React from 'react'
+import React, { Suspense } from 'react'
+import { NavBar } from './components/NavBar'
 import { GlobalStyle } from './styles/GlobalStyles'
+import { CustomHeader } from './components/CustomHeader'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Router } from '@reach/router'
 
 export const App = () => {
   return (
-    <div>
-      <GlobalStyle />
-      <Router>
-        <NotFound default />
-        <Home path='/' />
-      </Router>
-    </div>
+    <Suspense fallback={<div />}>
+      <div>
+        <GlobalStyle />
+        <CustomHeader />
+        <Router>
+          <NotFound default />
+          <Home path='/' />
+        </Router>
+        <NavBar />
+      </div>
+    </Suspense>
   )
 }
