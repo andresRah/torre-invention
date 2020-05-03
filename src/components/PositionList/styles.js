@@ -1,4 +1,8 @@
-import styled from 'styled-components'
+import { css } from 'styled-components'
 
-export const Ul = styled.ul`
+export const override = css`
+  display: block;
+  margin: 0 auto;
+  margin-top: 45px;
+  border-color: red;
 `

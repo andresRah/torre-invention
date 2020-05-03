@@ -18,7 +18,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: ['@babel/plugin-syntax-dynamic-import'],
+            plugins: ['@babel/plugin-syntax-dynamic-import', 'emotion'],
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
