@@ -44,7 +44,7 @@ export const PositionCard = ({ id, organizations }) => {
                 <DivFavSection>
                   <SpanLike onClick={() => setLocalStorage({
                     liked: !storedValue.liked,
-                    url: organizations[0]?.picture,
+                    picture: organizations[0]?.picture,
                     name: organizations[0]?.name
                   })}
                   >Likes <SpanCountLike><Icon size='14px' /> 640</SpanCountLike>

@@ -3,6 +3,6 @@ export const DEFAULT_IMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEA
 export const initialFavoritesValues =
 {
   liked: false,
-  url: DEFAULT_IMAGE,
+  picture: DEFAULT_IMAGE,
   name: 'Dummy'
 }
