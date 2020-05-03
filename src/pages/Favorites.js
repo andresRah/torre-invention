@@ -4,7 +4,7 @@ import { FavoritesBody } from '../components/FavoritesBody'
 export const Favorites = () => {
   return (
     <>
-      <FavoritesBody title='Tus favoritos' subtitle='Aquí puedes encontrar tus favoritos' />
+      <FavoritesBody title='Favorites companies' subtitle='Here, you can follow your favorites companies!' />
     </>
   )
 }

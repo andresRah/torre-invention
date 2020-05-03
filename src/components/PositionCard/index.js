@@ -8,7 +8,7 @@ import { MdFavoriteBorder, MdFavorite, MdLightbulbOutline, MdHighlightOff } from
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { DEFAULT_IMAGE, initialFavoritesValues } from '../../utils/Constants'
 
-export const PositionCard = ({ id, organizations }) => {
+export const PositionCard = ({ id, organizations, hideButtons = false }) => {
   const [show, element] = useNearScreen()
   const [storedValue, setLocalStorage] = useLocalStorage(`like-${organizations[0].id}`, initialFavoritesValues)
 
@@ -40,18 +40,20 @@ export const PositionCard = ({ id, organizations }) => {
                 <Span2>
                   Remoto (actualmente en Liverpool, United Kingdom)
                 </Span2>
-
-                <DivFavSection>
-                  <SpanLike onClick={() => setLocalStorage({
-                    liked: !storedValue.liked,
-                    picture: organizations[0]?.picture,
-                    name: organizations[0]?.name
-                  })}
-                  >Likes <SpanCountLike><Icon size='14px' /> 640</SpanCountLike>
-                  </SpanLike>
-                  <SpanLike>Content <SpanCountLike><MdLightbulbOutline size='14px' /> {Math.floor(Math.random() * (52 - 4) + 4)}</SpanCountLike></SpanLike>
-                  <SpanLike>Marketing <SpanCountLike><MdHighlightOff size='14px' /> {Math.floor(Math.random() * (29 - 4) + 4)}</SpanCountLike></SpanLike>
-                </DivFavSection>
+                {
+                  !hideButtons &&
+                    <DivFavSection>
+                      <SpanLike onClick={() => setLocalStorage({
+                        liked: !storedValue.liked,
+                        picture: organizations[0]?.picture,
+                        name: organizations[0]?.name
+                      })}
+                      >Likes <SpanCountLike><Icon size='14px' /> 640</SpanCountLike>
+                      </SpanLike>
+                      <SpanLike>Content <SpanCountLike><MdLightbulbOutline size='14px' /> {Math.floor(Math.random() * (52 - 4) + 4)}</SpanCountLike></SpanLike>
+                      <SpanLike>Marketing <SpanCountLike><MdHighlightOff size='14px' /> {Math.floor(Math.random() * (29 - 4) + 4)}</SpanCountLike></SpanLike>
+                    </DivFavSection>
+                }
               </Div4>
             </Div1>
           </Card>

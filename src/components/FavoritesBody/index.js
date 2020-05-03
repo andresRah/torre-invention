@@ -33,7 +33,7 @@ export const FavoritesBody = ({ children, title, subtitle }) => {
               organizations.push(favoriteJSON)
               console.log(organizations)
               return (
-                <PositionCard key={index} organizations={organizations} />
+                <PositionCard key={index} organizations={organizations} hideButtons />
               )
             }
           } catch (e) { }

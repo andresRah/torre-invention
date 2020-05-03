@@ -1,9 +1,8 @@
-import styled from 'styled-components'
+import styled, { css }  from 'styled-components'
 import { fadeIn } from '../../styles/animation'
 
 export const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  min-height: 170px;
   transition: 0.3s;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -20,6 +19,12 @@ export const Card = styled.div`
   z-index: 1;
   background-color: #27292D;
   color: rgba(255, 255, 255, 0.90);
+  min-height: 170px;
+  ${props => !props.hideButtons && css`
+  {
+    min-height: 125px;
+  }
+  `}
 `
 
 export const Div1 = styled.div`
