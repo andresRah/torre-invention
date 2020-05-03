@@ -9,6 +9,7 @@ export const Title = styled.h1`
   font-weight: 600;
   color: #EBEBEC;
   padding-bottom: 8px;
+  margin-left: 5px;
 `
 
 export const Subtitle = styled.h2`
@@ -16,4 +17,5 @@ export const Subtitle = styled.h2`
   font-weight: 400;
   color: #EBEBEC;
   padding-bottom: 4px;
+  margin-left: 5px;
 `
