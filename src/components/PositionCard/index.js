@@ -1,14 +1,16 @@
 import React from 'react'
 import {
-  Article, Img, Card, Div1, Div2, Div3, H5, Span1, Span2,
-  Span3, Span4, Span5, Span6, Span7, IElement2, Div4
+  Article, Img, Card, Div1, Div2, Div3, H5, Span1, Span2, SpanCountLike,
+  Span3, Span4, Span5, Span6, Span7, IElement2, Div4, DivFavSection, SpanLike
 } from './styles'
 import { useNearScreen } from '../../hooks/useNearScreen.js'
-
-const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+import { MdFavoriteBorder, MdFavorite, MdLightbulbOutline, MdHighlightOff } from 'react-icons/md'
+import { DEFAULT_IMAGE } from '../../utils/Constants'
 
 export const PositionCard = ({ id, organizations }) => {
   const [show, element] = useNearScreen()
+
+  const Icon = true ? MdFavorite : MdFavoriteBorder
 
   return (
     <Article ref={element}>
@@ -36,11 +38,17 @@ export const PositionCard = ({ id, organizations }) => {
                 <Span2>
                   Remoto (actualmente en Liverpool, United Kingdom)
                 </Span2>
+
+                <DivFavSection>
+                  <SpanLike>Likes <SpanCountLike><Icon size='14px' /> 640</SpanCountLike></SpanLike>
+                  <SpanLike>Content <SpanCountLike><MdLightbulbOutline size='14px' /> {Math.floor(Math.random() * (52 - 4) + 4)}</SpanCountLike></SpanLike>
+                  <SpanLike>Marketing <SpanCountLike><MdHighlightOff size='14px' /> {Math.floor(Math.random() * (29 - 4) + 4)}</SpanCountLike></SpanLike>
+                </DivFavSection>
               </Div4>
             </Div1>
           </Card>
         </>
       )}
     </Article>
-  );
+  )
 }

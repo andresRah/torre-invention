@@ -3,7 +3,7 @@ import { fadeIn } from '../../styles/animation'
 
 export const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  min-height: 200px;
+  min-height: 170px;
   transition: 0.3s;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -39,7 +39,7 @@ export const Div1 = styled.div`
   display: inline-flex;
   flex-grow: 1;
   width: 0;
-  margin-top: 10px;
+  margin-top: 21px;
 `
 
 export const Div2 = styled.div`
@@ -380,4 +380,60 @@ export const Div4 = styled.div`
   cursor: default !important;
   box-sizing: inherit;
   margin-right: 12px;
+`
+
+export const DivFavSection = styled.div`
+-webkit-font-smoothing: antialiased;
+-webkit-tap-highlight-color: transparent;
+font-weight: 400;
+font-family: Muli,Helvetica,Arial,sans-serif;
+letter-spacing: normal;
+font-size: 14px;
+line-height: 22px;
+-webkit-box-direction: normal;
+color: hsla(0,0%,100%,.65);
+cursor: default !important;
+box-sizing: inherit;
+margin: 16px;
+overflow: hidden;
+position: relative;
+white-space: nowrap;
+margin-left: 15px;
+`
+
+export const SpanLike = styled.span`
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: 400;
+  font-family: Muli,Helvetica,Arial,sans-serif;
+  letter-spacing: normal;
+  font-size: 14px;
+  -webkit-box-direction: normal;
+  white-space: nowrap;
+  cursor: default !important;
+  box-sizing: inherit;
+  background: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  color: hsla(0,0%,100%,.9);
+  display: inline-block;
+  height: 32px;
+  line-height: 100%;
+  margin-right: 6px;
+  padding: 8px 16px;
+`
+
+export const SpanCountLike = styled.span`
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: 400;
+  font-family: Muli,Helvetica,Arial,sans-serif;
+  letter-spacing: normal;
+  font-size: 14px;
+  -webkit-box-direction: normal;
+  white-space: nowrap;
+  color: hsla(0,0%,100%,.9);
+  line-height: 100%;
+  cursor: default !important;
+  box-sizing: inherit;
 `

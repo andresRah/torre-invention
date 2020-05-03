@@ -14,7 +14,7 @@ export const usePositionsListData = () => {
     GetUsers()
   }, [])
 
-  function GetUsers (offset = 110, size = 10, aggregate = 1) {
+  function GetUsers (offset = 300, size = 15, aggregate = 1) {
     setLoading(true)
     window
       .fetch(`${SERVICE_OPORTUNITIES_URL}?offset=${offset}&size=${size}&aggregate=${aggregate}`, {
